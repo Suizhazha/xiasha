@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<p>
+
+    <img src="" alt="Cat">
+    <img src="" alt="Hat">
+    <button onclick="replaceImages()">替换成文本</button>
+</p>
+<script>
+  function replaceImages() {
+    let images = document.body.getElementsByTagName('img')
+    for (let i = 0; i < images.length; i++) {
+      let img = images[i]
+      if (img.alt) {
+        let text = document.createTextNode(img.alt)
+        img.parentNode.replaceChild(text, img)
+      }
+    }
+  }
+
+</script>
+</body>
+</html>

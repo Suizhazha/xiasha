@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按键事件</title>
+</head>
+<body>
+<p>This page turns violet when you hold the V key.</p>
+<script>
+  window.addEventListener("keydown", event => {
+    //event.key值带引号
+  if (event.key === "v") {
+    document.body.style.background = "violet";
+  }
+});
+window.addEventListener("keyup", event => {
+  if (event.key === "v") {
+    document.body.style.background = "";
+  }
+});
+</script>
+</body>
+</html>
